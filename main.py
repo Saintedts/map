@@ -96,6 +96,7 @@ def get_recommendation(type_id):
 
     return recommendation_polygons
 
+st.set_page_config(page_title='Map',layout='wide', menu_items={"Get help": None, "Report a bug": None, "About": "https://github.com/Saintedts/map" })
 
 object_type = st.sidebar.radio('Тип социального объекта: ',
                                ['Больницы', 'Поликлиники', 'Объекты культуры',
@@ -131,6 +132,6 @@ folium.Polygon(locations=get_recommendation(type_id), color='red').add_to(Recomm
 folium.LayerControl().add_to(Map)
 folium_static(Map, 1300, 700)
 
-st.text("Founded and designed by Saintests___")
+#st.text("Founded and designed by Saintests___")
 
 
